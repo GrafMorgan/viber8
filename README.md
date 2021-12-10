@@ -223,4 +223,5 @@ public class MainActivity extends AppCompatActivity {
 }
 ~~~
 7. Проверяеем
+![image](https://user-images.githubusercontent.com/38504787/145621754-6c36dc50-9878-4ea0-80c3-4e8f4412a9f8.png)
 
