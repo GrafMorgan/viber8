@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nicknameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите кличку"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/breedText"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/breedText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите породу"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ageText"
+        app:layout_constraintTop_toTopOf="@id/nicknameText" />
+    <EditText
+        android:id="@+id/ageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите возраст"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addButton"
+        app:layout_constraintTop_toBottomOf="@id/breedText" />
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Добавить"
+        android:onClick="addPet"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        app:layout_constraintTop_toBottomOf="@id/ageText" />
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:onClick="save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/openButton"
+        app:layout_constraintBottom_toTopOf="@id/list"
+        app:layout_constraintTop_toBottomOf="@id/addButton"/>
+    <Button
+        android:id="@+id/openButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Открыть"
+        android:onClick="open"
+        app:layout_constraintLeft_toRightOf="@id/saveButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/list"
+        app:layout_constraintTop_toBottomOf="@id/addButton"/>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/openButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
